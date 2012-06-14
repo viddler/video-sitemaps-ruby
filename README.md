@@ -15,12 +15,12 @@ Run from CLI
 
 Run from your ruby code
 -----------------------
-   require 'rubygems'
-   require 'viddler-sitemaps'
+    require 'rubygems'
+    require 'viddler-sitemaps'
 
-   sitemap = Viddler::Sitemap.new(api_key, username, password)
-   indexed_videos = sitemap.generate!(folder)
-   puts "Indexed #{indexed_videos} videos to #{folder}"
+    sitemap = Viddler::Sitemap.new(api_key, username, password)
+    indexed_videos = sitemap.generate!(folder)
+    puts "Indexed #{indexed_videos} videos to #{folder}"
 
 Code Docs
 ---------
