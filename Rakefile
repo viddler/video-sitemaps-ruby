@@ -15,12 +15,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "viddler-sitemaps"
-  gem.homepage = "http://github.com/viddler/viddler-sitemaps"
+  gem.homepage = "https://github.com/viddler/video-sitemaps-ruby"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{DIY Video Sitemaps using The Viddler API}
+  gem.description = %Q{DIY Video Sitemaps using The Viddler API}
   gem.email = "mail@matthewfawcett.co.uk"
-  gem.authors = ["viddler"]
+  gem.authors = ["viddler", "mattfawcett"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
