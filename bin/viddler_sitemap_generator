@@ -1,0 +1,59 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+# resolve bin path, ignoring symlinks
+require 'pathname'
+bin_file = Pathname.new(__FILE__).realpath
+
+# add self to libpath
+$:.unshift File.expand_path('../../lib', bin_file)
+
+require 'optparse'
+require 'viddler-sitemaps'
+
+options = {}
+
+opt_parser = OptionParser.new do |opt|
+  opt.banner = 'Usage: viddler_sitemap_generator -k apikey -u username -p password /path/to/public/folder'
+  opt.separator ''
+
+  opt.on('-k','--api-key API_KEY', 'Your Viddler API key') do |api_key|
+    options[:api_key] = api_key
+  end
+
+  opt.on('-u','--username USERNAME', 'Your Viddler usrname') do |username|
+    options[:username] = username
+  end
+
+  opt.on('-p','--password PASSWORD', 'Your Viddler password') do |password|
+    options[:password] = password
+  end
+
+  opt.on('-h','--help','help') do
+    puts opt_parser
+    exit
+  end
+end
+
+opt_parser.parse!
+
+[:api_key, :username, :password].each do |option|
+  if options[option].nil?
+    puts "You must specify your #{option}"
+    puts opt_parser
+    exit
+  end
+end
+
+folder = ARGV.last
+if folder
+  if File.directory?(folder)
+    sitemap = Viddler::Sitemap.new(options[:api_key], options[:username], options[:password])
+    indexed_videos = sitemap.generate!(folder)
+    puts "Indexed #{indexed_videos} videos to #{folder}"
+  else
+    puts "Folder #{folder} does not appear to exist"
+  end
+else
+  puts 'You must specift the folder where you wish to save the sitemap files'
+end

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>http://www.viddler.com/v/182d7551</loc>
+    <video:video>
+      <video:thumbnail_loc>http://www.viddler.com/thumbnail/182d7551</video:thumbnail_loc>
+      <video:title>vid8</video:title>
+      <video:description>Some  &lt;b&gt;Strong&lt;/b&gt; Description \n \n a new line</video:description>
+      <video:player_loc allow_embed="no">http://www.viddler.com/embed/182d7551</video:player_loc>
+      <video:duration>96</video:duration>
+      <video:view_count>0</video:view_count>
+      <video:publication_date>2012-05-25</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>http://www.viddler.com/v/7e6eba64</loc>
+    <video:video>
+      <video:thumbnail_loc>http://www.viddler.com/thumbnail/7e6eba64</video:thumbnail_loc>
+      <video:title>vid9</video:title>
+      <video:description>A description goes here</video:description>
+      <video:player_loc allow_embed="no">http://www.viddler.com/embed/7e6eba64</video:player_loc>
+      <video:duration>96</video:duration>
+      <video:view_count>0</video:view_count>
+      <video:publication_date>2012-05-25</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+</urlset>
